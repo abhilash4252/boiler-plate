@@ -1,0 +1,62 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "App Name",
+    "description": "Description of the API",
+    "version": "1.0"
+  },
+  "basePath": "/api",
+  "produces": ["application/json"],
+  "tags": [
+    {
+      "name": "User",
+      "description": "Operations on logged in user object"
+    }
+  ],
+  "securityDefinitions": {},
+  "paths": {
+    "/test": {
+      "post": {
+        "x-swagger-router-controller": "home",
+        "operationId": "index",
+        "tags": ["/test"],
+        "description": "[Login 123](https://www.google.com)",
+        "parameters": [
+          {
+            "name": "test",
+            "in": "formData",
+            "type": "array",
+            "collectionFormat": "multi",
+            "items": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "profileId",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "in": "formData",
+            "type": "file",
+            "required": "true"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/bar": {
+      "get": {
+        "x-swagger-router-controller": "bar",
+        "tags": ["/test"],
+        "operationId": "impossible",
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    }
+  },
+  "definition": {}
+}
